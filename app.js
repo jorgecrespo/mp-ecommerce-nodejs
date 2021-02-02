@@ -122,21 +122,7 @@ app.post('/api/getlink', async (req, res) => {
         // si la compra es exitosa automaticamente redirige a "success" de back_urls
             };
         
-        //     try {
-        //       const request =  axios.post(url, preferences, {
-        //  // hacemos el POST a la url que declaramos arriba, con las preferencias
-        //         headers: { 
-        // // y el header, que contiene content-Type
-        //           "Content-Type": "application/json"
-        //         }
-        //       });
-        
-        //       return request.data; 
-        // // devolvemos la data que devuelve el POST
-        //     } catch (e) {
-        //       console.log(e); 
-        // // mostramos error en caso de que falle el POST
-        //     }
+       
         var url = `${mercadoPagoUrl}/preferences?access_token=${access_token}`;
         var init_point = await fetch(url, {
             method: 'POST', // or 'PUT'
@@ -152,18 +138,23 @@ app.post('/api/getlink', async (req, res) => {
         });
 
         res.redirect(init_point)
-
-
-
-
-
-
-
-
-
-
-
 })
+
+app.post("/webhook", (req, res) => {
+   
+        if (req.method === "POST") { 
+          let body = ""; 
+          req.on("data", chunk => {  
+            body += chunk.toString();
+          });
+          req.on("end", () => {  
+            console.log(body, "webhook response"); 
+            res.end("ok");
+          });
+        
+        return res.status(200); 
+      }
+});
 
 
 app.listen(port);
