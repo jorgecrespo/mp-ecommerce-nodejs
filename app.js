@@ -109,11 +109,11 @@ app.post('/api/getlink', async (req, res) => {
               }, 
               back_urls: {
         // declaramos las urls de redireccionamiento
-                success: "localhost:3000/pago-exitoso", 
+                success: "https://jorgecrespo-mp-commerce-nodejs.herokuapp.com/pago-exitoso", 
         // url que va a redireccionar si sale todo bien
-                pending: "localhost:3000/pago-pendiente", 
+                pending: "https://jorgecrespo-mp-commerce-nodejs.herokuapp.com/pago-pendiente", 
         // url a la que va a redireccionar si decide pagar en efectivo por ejemplo
-                failure: "localhost:3000/pago-error" 
+                failure: "https://jorgecrespo-mp-commerce-nodejs.herokuapp.com/pago-error" 
         // url a la que va a redireccionar si falla el pago
               }, 
               notification_url: "https://mercadopago-checkout.herokuapp.com/webhook", 
