@@ -140,8 +140,10 @@ app.post('/api/getlink', async (req, res) => {
         res.redirect(init_point)
 })
 
-app.post("/webhook", (req, res) => {
+app.post('/webhook', async (req, res) => {
    
+    console.log('req', req)
+    console.log('res', res)
         if (req.method === "POST") { 
           let body = ""; 
           req.on("data", chunk => {  
