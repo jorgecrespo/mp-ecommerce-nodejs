@@ -129,7 +129,8 @@ app.post('/api/getlink', async (req, res) => {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(preferences), // data can be `string` or {object}!
             headers:{
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'x-integrator-id':'dev_24c65fb163bf11ea96500242ac130004'
             }
           }).then(res => res.json())
           .catch(error => console.error('Error:', error))
