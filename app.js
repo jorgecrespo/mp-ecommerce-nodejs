@@ -141,9 +141,9 @@ app.post('/api/getlink', async (req, res) => {
 })
 
 app.post('/webhook', async (req, res) => {
-   
-    console.log('req', req)
-    console.log('res', res)
+   console.log('/webhook')
+    console.log('req:: ', req)
+    console.log('res:: ', res)
         if (req.method === "POST") { 
           let body = ""; 
           req.on("data", chunk => {  
@@ -154,7 +154,7 @@ app.post('/webhook', async (req, res) => {
             res.end("ok");
           });
         
-        return res.status(200); 
+        return res.sendStatus(200); 
       }
 });
 
