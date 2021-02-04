@@ -25,7 +25,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pago-exitoso', function (req, res) {
-    res.send('Pago exitoso');
+    console.log(req.query)
+    res.send('Pago exitoso' + JSON.stringify(req.query));
 });
 
 app.get('/pago-pendiente', function (req, res) {
