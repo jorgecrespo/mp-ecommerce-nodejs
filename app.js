@@ -6,8 +6,8 @@ const fetch = require("node-fetch");
 
 // Mercado Pago
 var mercadoPagoUrl = "https://api.mercadopago.com/checkout";
-// var access_token = "APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398" //prod
-var access_token = "TEST-4338266192901303-020323-b1fcf22f61b34056d664f85ee269ba63-709751355"  // test
+var access_token = "APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398" //prod
+// var access_token = "TEST-4338266192901303-020323-b1fcf22f61b34056d664f85ee269ba63-709751355"  // test
 
 var app = express();
  
