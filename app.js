@@ -56,7 +56,7 @@ app.post('/api/getlink', async (req, res) => {
   // nombre que viene de la prop que recibe del controller
           description: "Dispositivo móvil de Tienda e-commerce",
    // descripción del producto
-          picture_url: img.replace('.','https://jorgecrespo-mp-commerce-nodejs.herokuapp.com/'), 
+          picture_url: img.replace('.','https://jorgecrespo-mp-commerce-nodejs.herokuapp.com'), 
   // url de la imágen del producto
           category_id: "1234",  
   // categoría interna del producto (del negocio)
@@ -145,7 +145,7 @@ app.post('/api/getlink', async (req, res) => {
 
 app.post('/webhook', async (req, res) => {
    console.log('/webhook')
-    console.log('req:: ', req.json(),'fin-req')
+    console.log('req:: ', req,'fin-req')
     console.log('res:: ', res)
         if (req.method === "POST") { 
           let body = ""; 
