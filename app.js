@@ -54,9 +54,9 @@ app.post('/api/getlink', async (req, res) => {
   // id interno (del negocio) del item
           title: title, 
   // nombre que viene de la prop que recibe del controller
-          description: "Dispositivo movil de Tienda e-commerce",
+          description: "Dispositivo móvil de Tienda e-commerce",
    // descripción del producto
-          picture_url: img, 
+          picture_url: img.replace('.','https://jorgecrespo-mp-commerce-nodejs.herokuapp.com/'), 
   // url de la imágen del producto
           category_id: "1234",  
   // categoría interna del producto (del negocio)
